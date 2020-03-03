@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Gatsby Wordpress build from Gatsby's hello-world starter
 </h1>
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
@@ -40,7 +40,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🧐 What's inside?
+## 🧐 What's inside? 
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
