@@ -4,3 +4,9 @@ body {
     margin: 0;
     padding-bottom: 60px;
 }
+
+.language-bash {
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+}

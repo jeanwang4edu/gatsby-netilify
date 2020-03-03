@@ -4,8 +4,7 @@ const path = require("path");
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if(node.internal.type === "MarkdownRemark"){
-        const slug = createFilePath({ node, getNode, basePath: "posts"});
-        console.log(slug);
+        const slug = createFilePath({ node, getNode, basePath: "posts"});    
         createNodeField({
             node,
             name: "slug",
@@ -18,21 +17,19 @@ exports.createPages = ({graphql, actions}) => {
     const { createPage } = actions;
     return graphql(`
         {
-            allMarkdownRemark {
+            allWordpressPost {
                 nodes {
-                    fields {
                     slug
-                    }
                 }
             }
         }
     `).then(result => {
-        result.data.allMarkdownRemark.nodes.forEach((node)=>{
+        result.data.allWordpressPost.nodes.forEach((node)=>{
             createPage({
-                path: node.fields.slug,                
+                path: node.slug,                
                 component: path.resolve('./src/layouts/BlogpostLayout.js'),
                 context: {
-                    slug: node.fields.slug
+                    slug: node.slug
                 }
                   
             })
