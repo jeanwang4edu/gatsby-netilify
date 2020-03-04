@@ -31,9 +31,23 @@ module.exports = {
            * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
            * Example : 'demo.wp-api.org' or 'www.example-site.com'
            */
-          baseUrl: "codingsrc.com",
+          baseUrl: "artsinmotion.net",
           // The protocol. This can be http or https.
-          protocol: "http",
+          protocol: "https",
+          hostingWPCOM: false,
+          // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
+          // This feature is untested for sites hosted on wordpress.com.
+          // Defaults to true.
+          useACF: false,
+          includedRoutes: [
+            "**/categories",
+            "**/posts",
+            "**/pages",
+            "**/media",
+            "**/tags",
+            "**/taxonomies",
+            "**/users",
+          ],
         },
       },
       {
