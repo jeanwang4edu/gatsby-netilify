@@ -18,11 +18,11 @@ export default ({data}) => {
           ))}      
         </PrimaryLayout>
     )
-}
+};
 
 export const query = graphql`
 {
-  allWordpressPost(filter: {categories: {elemMatch: {name: { eq: "Informative" }}}}) {
+  allWordpressPost( filter:{ slug: { eq: "what-is-modern-dance" } } ) {
     nodes {
       date(formatString: "MMMM DD, YYYY")
       slug
@@ -39,3 +39,5 @@ export const query = graphql`
   }
 }
 `
+
+/* allWordpressPost(filter: {categories: {elemMatch: {name: { eq: "Informative" }}}}) { */
