@@ -13,8 +13,7 @@ const BlogpostLayout = ({data}) => {
         <div>
             <SEO
               title={innertext(post.title)}
-              description={innertext(post.excerpt)}
-              image={post.featured_media.source_url}
+              description={innertext(post.excerpt)}              
               keyword={post.categories.map(res => res.name).join(', ')}
             />
             <Header />
@@ -51,3 +50,7 @@ export const query = graphql`
     }
   }
 `
+
+/*
+image={post.featured_media.source_url}
+*/
