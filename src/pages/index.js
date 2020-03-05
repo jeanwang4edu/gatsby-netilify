@@ -22,9 +22,8 @@ export default ({data}) => {
 
 export const query = graphql`
 {
-  allWordpressPost( filter:{ slug: { eq: "what-is-modern-dance" } } ) {
+  allWordpressPost {
     nodes {
-      date(formatString: "MMMM DD, YYYY")
       slug
       title
       excerpt

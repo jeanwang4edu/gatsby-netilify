@@ -15,12 +15,13 @@ const BlogpostLayout = ({data}) => {
               title={innertext(post.title)}
               description={innertext(post.excerpt)}              
               keyword={post.categories.map(res => res.name).join(', ')}
+              image={post.featured_media.source_url}
             />
             <Header />
             <main>
               <div className="container">
-                  <div className="row justify-content-md-center">
-                      
+                  <div className="row justify-content-md-center">     
+                      <img src={post.featured_media.source_url} alt={post.featured_media.alt_text} />                 
                       <h1 dangerouslySetInnerHTML={{__html: post.title}} />
                       <div dangerouslySetInnerHTML={{__html: post.content}} />
                   </div>
@@ -54,4 +55,22 @@ export const query = graphql`
 /*
 image={post.featured_media.source_url}
 <Image src={post.featured_media.source_url} alt={post.featured_media.alt_text} rounded/>
+
+{
+  allWordpressPost( filter:{ slug: { eq: "what-is-modern-dance" } } ) {
+    nodes {
+      date(formatString: "MMMM DD, YYYY")
+      slug
+      title
+      excerpt
+      categories {
+        name
+      }
+      featured_media {
+        source_url
+        slug
+      }
+    }
+  }
+}
 */
