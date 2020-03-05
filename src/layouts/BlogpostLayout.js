@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import innertext from "innertext";
-import {Image} from 'react-bootstrap';
+// import {Image} from 'react-bootstrap';
 
 
 const BlogpostLayout = ({data}) => {
