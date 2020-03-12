@@ -1,11 +1,14 @@
 import React from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'gatsby';
+import SiteLogo from "../components/SiteLogo";
 
 export default () => (
     <header>
         <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">Gatsby-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">
+            <SiteLogo />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

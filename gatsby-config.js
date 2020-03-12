@@ -38,7 +38,7 @@ module.exports = {
           // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
           // This feature is untested for sites hosted on wordpress.com.
           // Defaults to true.
-          useACF: false,
+          useACF: true,
           includedRoutes: [
             "**/categories",
             "**/posts",
@@ -47,6 +47,8 @@ module.exports = {
             "**/tags",
             "**/taxonomies",
             "**/users",
+            "**/logo",
+            "**/menus",
           ],
         },
       },

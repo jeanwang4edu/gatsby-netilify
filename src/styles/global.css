@@ -10,3 +10,9 @@ body {
     background-color: black;
     padding: 5px;
 }
+
+/**** logo ****/
+.siteLogo {
+    width: 200px;
+    height: 121px;
+}
