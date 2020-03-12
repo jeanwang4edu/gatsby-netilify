@@ -1,3 +1,11 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ * 
+ * copy the template from plugin gatsby-source-wordpress page
+ */
+
 const { createFilePath } = require("gatsby-source-filesystem");
 const path = require("path");
 
