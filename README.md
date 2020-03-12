@@ -7,6 +7,8 @@
 <h1 align="center">
   Gatsby Wordpress build from Gatsby's hello-world starter
 </h1>
+<a href="https://gatsby.jeanwang2dev.com/">gatsby.jeanwang2dev.com</a>
+<hr>
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
