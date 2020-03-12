@@ -9,7 +9,7 @@ const PrimaryLayout = (props) => (
         <Header />
         <main>
             <div className="container">
-                <div className="row justify-content-md-center">
+                <div className="row justify-content-center">
                     <div className={props.column}>
                         {props.children}
                     </div>
