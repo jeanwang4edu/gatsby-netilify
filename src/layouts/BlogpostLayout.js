@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql} from 'gatsby'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import SEO from "../components/SEO";
+import Seo from "../components/Seo";
 import innertext from "innertext";
 // import {Image} from 'react-bootstrap';
 
@@ -11,7 +11,7 @@ const BlogPostLayout = ({data}) => {
     const post = data.wpPost;
     return (
         <div>
-            <SEO
+            <Seo
               title={innertext(post.title)}
               description={innertext(post.excerpt)}              
               keyword={post.categories.nodes.map(res => res.name).join(', ')}

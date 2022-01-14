@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-const SEO = ({title, description, keywords, image}) => (
+const Seo = ({title, description, keywords, image}) => (
   <StaticQuery
     query={query}
     render={({
@@ -42,7 +42,7 @@ const SEO = ({title, description, keywords, image}) => (
   />
 );
 
-export default SEO;
+export default Seo;
 
 const query = graphql`
 {
