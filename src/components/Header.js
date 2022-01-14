@@ -3,7 +3,7 @@ import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'gatsby';
 import SiteLogo from "../components/SiteLogo";
 
-export default () => (
+const Header = () => (
     <header>
         <Navbar bg="light" expand="lg">
         <Navbar.Brand href="/">
@@ -20,10 +20,15 @@ export default () => (
                 </Nav.Link>            
                 <Nav.Link as={Link} to="/contact">
                     <b className="text-dark">Contact Us</b>
-                </Nav.Link>            
+                </Nav.Link>  
+                <Nav.Link as={Link} to="/test">
+                    <b className="text-dark">Test</b>
+                </Nav.Link>             
             </Nav>
         </Navbar.Collapse>
         </Navbar>
     </header>
 
 );
+
+export default Header;

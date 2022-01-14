@@ -31,25 +31,22 @@ module.exports = {
            * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
            * Example : 'demo.wp-api.org' or 'www.example-site.com'
            */
-          baseUrl: "site227.temptesting.com",
+          url: "https://site227.temptesting.com/graphql",
           // The protocol. This can be http or https.
-          protocol: "https",
-          hostingWPCOM: false,
           // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
           // This feature is untested for sites hosted on wordpress.com.
           // Defaults to true.
-          useACF: true,
-          includedRoutes: [
-            "**/categories",
-            "**/posts",
-            "**/pages",
-            "**/media",
-            "**/tags",
-            "**/taxonomies",
-            "**/users",
-            "**/logo",
-            "**/menus",
-          ],
+          // includedRoutes: [
+          //   "**/categories",
+          //   "**/posts",
+          //   "**/pages",
+          //   "**/media",
+          //   "**/tags",
+          //   "**/taxonomies",
+          //   "**/users",
+          //   "**/logo",
+          //   "**/menus",
+          // ],
         },
       },
       {
@@ -61,6 +58,7 @@ module.exports = {
           background_color: `#f8f9fa`,
           theme_color: `#ffffff`,
           display: `standalone`,
+          icon: `src/images/icon.png`,
         },
       },
       `gatsby-plugin-offline`

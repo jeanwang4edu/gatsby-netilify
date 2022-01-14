@@ -3,14 +3,14 @@ import {graphql} from 'gatsby';
 import PrimaryLayout from "../layouts/PrimaryLayout";
 import Post from "../components/Post";
 
-export default ({data}) => {
+const App = ({data}) => {
     // console.log(data);
     return (
         <PrimaryLayout column="col-xs-6">
-          {data.allWordpressPost.nodes.map((node)=>(
+          {data.allWpPost.nodes.map((node)=>(
             <Post 
-              alt={node.featured_media.slug}
-              image={node.featured_media.source_url}
+              alt={node.featuredImage.node.slug}
+              image={node.featuredImage.node.sourceUrl}
               title={node.title}
               excerpt={node.excerpt}
               readmore={node.slug}
@@ -22,21 +22,25 @@ export default ({data}) => {
 
 export const query = graphql`
 {
-  allWordpressPost {
+  allWpPost {
     nodes {
       slug
       title
       excerpt
       categories {
-        name
+        nodes {
+          name
+        }
       }
-      featured_media {
-        source_url
-        slug
+      featuredImage {
+        node {
+          sourceUrl
+          slug
+        }
+
       }
     }
   }
 }
 `
-
-/* allWordpressPost(filter: {categories: {elemMatch: {name: { eq: "Informative" }}}}) { */
+export default App;
