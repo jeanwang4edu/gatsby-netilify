@@ -23,7 +23,7 @@
     "gatsby-plugin-react-helmet": "^5.5.0",
     "gatsby-source-filesystem": "^4.5.1",
     "gatsby-source-wordpress": "^6.5.1",
-    "gatsby-transformer-remark": "^5.5.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gsap": "file:gsap-bonus.tgz",
     "innertext": "^1.0.3",
     "jquery": "^3.5.0",
